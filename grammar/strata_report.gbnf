@@ -1,0 +1,7 @@
+# Uso opcional: SOMENTE em chamada separada que gera o relatorio final.
+# Nunca no turno principal: --grammar-file restringe a geracao desde o primeiro token.
+root   ::= "    [STRATA_REPORT]\n" lvl chg cmd rsk
+lvl    ::= "    - Level: " ("L0" | "L1" | "L2") "\n"
+chg    ::= "    - Changed: " [^\n]+ "\n"
+cmd    ::= "    - Commands run: " [^\n]+ "\n"
+rsk    ::= "    - Risks: " [^\n]+ "\n"
